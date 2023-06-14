@@ -1,61 +1,185 @@
 {{ define "main" }}
+<script
+  defer
+  data-domain="yourdomain.com"
+  data-api="/something/api/event"
+  src="/something/js/script.js"
+></script>
+<script src="https://unpkg.com/emojisplosion/lib/global.js"></script>
+<script>
+  function getAbsolutePosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+
+    while (element) {
+      xPosition += element.offsetLeft - element.scrollLeft + element.clientLeft;
+      yPosition += element.offsetTop - element.scrollTop + element.clientTop;
+      element = element.offsetParent;
+    }
+    return { x: xPosition, y: yPosition };
+  }
+
+  function partyMode() {
+    const element = document.querySelector(".emoji-button");
+    console.log(element);
+    emojisplosion({
+      position() {
+        // https://stackoverflow.com/questions/1480133
+        const offset = getAbsolutePosition(element);
+
+        return {
+          x: offset.x + element.clientWidth / 2,
+          y: offset.y + element.clientHeight / 2,
+        };
+      },
+    });
+  }
+</script>
+
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
-      <h1 class="mt-0">{{ .Title }}</h1>
+      <h1 class="mt-0">TweetNFTs</h1>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>
+      <p class="lead">Collect, back up and mint tweets as NFTs.</p>
+      <a
+        class="btn btn-primary btn-lg px-4 mb-2 emoji-button"
+        onclick="partyMode()"
+        role="button"
+        >Mint Tweets as NFTs</a
+      >
+      <p class="meta">Open-source MIT Licensed.</p>
     </div>
   </div>
 </section>
-{{ end }}
-
-{{ define "sidebar-prefooter" }}
-  {{ if eq $.Site.Language.LanguageName "English" }}
-  <section class="section section-sm">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-5">
-          <h2 class="h4">Security aware</h2>
-          <p>Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Fast by default ⚡️</h2>
-          <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=59aafe464a68f8bc30b8e9a636d5b053">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">SEO-ready</h2>
-          <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
-        </div>
+{{ end }} {{ define "sidebar-prefooter" }} {{ if eq $.Site.Language.LanguageName
+"English" }}
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-5">
+        <h2 class="h4">🔒 Secure</h2>
+        <p>
+          Based on <a href="https://www.openzeppelin.com/">OppenZeppelin</a>'s
+          ERC 1155 implementation, your tweets are securely stored on the chain,
+          with the data being stored on
+          <a href="https://arweave.org">Arweave</a>, a permanent and
+          decentralized storage system.
+        </p>
       </div>
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-5">
-          <h2 class="h4">Full text search</h2>
-          <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Page layouts</h2>
-          <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Dark mode</h2>
-          <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
+      <div class="col-lg-5">
+        <h2 class="h4">🎯 Direct On-chain Representation</h2>
+        <p>
+          Once your tweet is minted as an NFT, its number of likes, comments,
+          etc. will show up on websites like
+          <a href="https://opensea.io">OpenSea</a> as traits. Your NFT is a
+          direct on-chain representation of your tweet.
+        </p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">🧬 Evolving NFTs</h2>
+        <p>
+          As your tweet gets more likes, comments, etc. the traits of your NFT
+          evolve too. If you get a new like, for example, this will be reflected
+          in the "like" trait of your NFT.
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-5">
+        <h2 class="h4">🖼️ Display</h2>
+        <p>
+          Your NFT shows up as a beautiful image of your tweet, allowing you to
+          quickly see which tweet is which in your collection and show it off to
+          your friends.
+        </p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">🗃️ Back up and collect tweets</h2>
+        <p>
+          You can mint any tweet, including tweets that are not your own,
+          allowing you to collect or back up tweets from your favorite
+          Twitteratis. A tweet can be minted multiple times by different
+          wallets.
+        </p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">🤖 Powered by AI</h2>
+        <p>
+          We use GPT4 to summarize your tweet in a few words, and use it as your
+          NFT's title. This allows you to quickly filter through tweets based on
+          their subject.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<hr />
+<section class="section section-open-collective mt-3 bg-light py-5">
+  <div class="container">
+    <h2 class="h3 mt-0 text-center">Ready to get started?</h2>
+    <p class="text-center">
+      It only takes two clicks to transform your tweet into an NFT!
+    </p>
+    <p class="text-center mb-0 mt-4">
+      <a
+        class="btn btn-primary btn-lg px-4 mb-2 emoji-button"
+        onclick="partyMode()"
+        role="button"
+        >Mint Tweets as NFTs</a
+      >
+    </p>
+  </div>
+</section>
+<hr />
+<section class="section section-sm mt-3 pt-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xl-8">
+        <h2 class="h3 mt-3 text-center">FAQ</h2>
+        <div class="card-list">
+          <div class="card">
+            <div class="card-body">
+              <h5>Is every interaction with my tweet reflected in the NFT?</h5>
+              <p>
+                Yes! Metrics like likes, comments, impressions, retweets, quote
+                retweets, and bookmarks are all tracked and regularly updated in
+                the NFT's traits.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5>Are there any fees?</h5>
+              <p>
+                If you mint tweets one by one, the cost is $10 per tweet.
+                However, you can take our Twitterati Mega Pack priced at $100 to
+                mint up to 20 tweets at once, offering you a 50% price reduction
+                per tweet.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5>Any future functionalities you are working on?</h5>
+              <p>
+                We are incredibly for the future of TweetNFTs, and have a ton of
+                new features coming up. These include the launch of a browser
+                extension, a Twitter bot, web2 payment gateways, as well as many
+                new improvements.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  {{ end }}
-{{ end }}
-
-{{ define "sidebar-footer" }}
+  </div>
+</section>
+{{ end }} {{ end }} {{ define "sidebar-footer" }}
 <section class="section section-sm container-fluid">
   <div class="row justify-content-center text-center">
-    <div class="col-lg-9">
-      {{- .Content -}}
-    </div>
+    <div class="col-lg-9">{{- .Content -}}</div>
   </div>
 </section>
 {{ end }}

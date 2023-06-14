@@ -40,3 +40,14 @@
   port = 8888
   publish = "public"
   autoLaunch = false
+
+[[redirects]]
+  from = "/something/js/script.js"
+  to = "https://plausible.io/js/plausible.js"
+  status = 200
+
+[[redirects]]
+  from = "/something/api/event"
+  to = "https://plausible.io/api/event"
+  status = 202
+

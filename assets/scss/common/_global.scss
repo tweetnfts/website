@@ -124,7 +124,7 @@ body {
     border-right: 1px solid $gray-200;
   }
 
-  @supports ((position:-webkit-sticky) or (position:sticky)) {
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
     .docs-sidebar {
       position: -webkit-sticky;
       position: sticky;
@@ -171,7 +171,7 @@ body {
   order: 2;
 }
 
-@supports ((position:-webkit-sticky) or (position:sticky)) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .docs-toc {
     position: -webkit-sticky;
     position: sticky;
@@ -228,7 +228,21 @@ body {
 }
 
 ::selection {
-  background: rgba(212, 53, 159, 0.2);
+  background: #4793da;
+}
+
+a::selection {
+  background: #4793da;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #4793da;
+}
+
+a::-moz-selection {
+  background: #4793da;
+  color: #fff;
 }
 
 .bg-dots {

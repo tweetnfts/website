@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "TweetNFTs"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
+titleAddition = "Tweets as NFTs"
+description = "Collect, back up, and mint your favorite tweets as NFTs."
 
 ## Documentation
 # docsVersion = "0.3"
@@ -13,11 +13,11 @@ description = "Doks is a Hugo theme for building secure, fast, and SEO-ready doc
 images = ["doks.png"]
 ogLocale = "en_US"
 domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+titleHome = "TweetNFTs"
 
 ## Twitter Cards
-twitterSite = "@getdoks"
-twitterCreator = "@henkverlinde"
+twitterSite = "@tweetnfts"
+twitterCreator = "@tweetnfts"
 
 ## JSON-LD
 # schemaType = "Person"
@@ -65,7 +65,7 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "Made with 💙 by <a href='https://twitter.com/Thomas181197'>Thomas</a> and <a href='https://twitter.com/maxdesalle'>Maxime</a>, with help from <a href='https://www.linkedin.com/in/guillaume-wafflard/'>Guillaume</a>, <a href='https://www.linkedin.com/in/omar-g-69892a119/'>Omar</a> and Baktash"
 
 # Feed
 copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
@@ -93,7 +93,7 @@ lastMod = false
   lazySizes = true
   clipBoard = true
   instantPage = true
-  flexSearch = true
+  flexSearch = false
   searchSectionsShow = []
   searchSectionsIndex = []
   darkMode = true

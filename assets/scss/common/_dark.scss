@@ -16,14 +16,14 @@ $link-color-dark: $blue-300;
 $button-color-dark: $link-color-dark;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
 
-$navbar-dark-color:                 $body-color-dark;
-$navbar-dark-hover-color:           $link-color-dark;
-$navbar-dark-active-color:          $link-color-dark;
+$navbar-dark-color: $body-color-dark;
+$navbar-dark-hover-color: $link-color-dark;
+$navbar-dark-active-color: $link-color-dark;
 
 /** Theme styles */
 
 [data-dark-mode] body {
-  background: $body-bg-dark;
+  background: #000;
   color: $body-color-dark;
 }
 
@@ -38,7 +38,8 @@ $navbar-dark-active-color:          $link-color-dark;
 [data-dark-mode] body .btn-primary {
   @include button-variant($button-color-dark, $button-color-dark);
 
-  color: $body-bg-dark !important;
+  // color: $body-bg-dark !important;
+  color: #fff !important;
 }
 
 [data-dark-mode] body .btn-outline-primary {
@@ -83,7 +84,8 @@ $navbar-dark-active-color:          $link-color-dark;
 
 [data-dark-mode] body .navbar,
 [data-dark-mode] body .doks-subnavbar {
-  background-color: rgba(33, 37, 41, 0.95);
+  background-color: #000;
+  // background-color: rgba(33, 37, 41, 0.95);
   border-bottom: 1px solid $border-dark;
 }
 
@@ -236,7 +238,8 @@ $navbar-dark-active-color:          $link-color-dark;
   color: $link-color-dark;
 }
 
-[data-dark-mode] body .content img[src^="https://latex.codecogs.com/svg.latex"] {
+[data-dark-mode] body .content img[src^="https://latex.codecogs.com/svg.latex"]
+{
   filter: invert(1);
 }
 
@@ -407,7 +410,14 @@ $navbar-dark-active-color:          $link-color-dark;
 }
 
 [data-dark-mode] body .bg-light {
-  background: darken($body-bg-dark, 1.5%) !important;
+  // background: darken($body-bg-dark, 1.5%) !important;
+  background: #000 !important;
+}
+
+hr {
+  background-color: rgb(255, 255, 255) !important;
+  height: 1px;
+  border: 0;
 }
 
 [data-dark-mode] body .bg-dots {
@@ -483,7 +493,7 @@ $navbar-dark-active-color:          $link-color-dark;
 }
 
 [data-dark-mode] body hr.text-black-50 {
-  color: $gray-600 !important;
+  color: #fff !important;
 }
 
 [data-dark-mode] body .email-form .form-control {
