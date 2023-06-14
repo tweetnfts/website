@@ -67,5 +67,8 @@
   },
   "otherDependencies": {
     "hugo": "0.107.0"
+  },
+  "dependencies": {
+    "emojisplosion": "^2.6.1"
   }
 }
