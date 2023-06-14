@@ -5,36 +5,8 @@
   data-api="/something/api/event"
   src="/something/js/script.js"
 ></script>
-<script src="https://unpkg.com/emojisplosion/lib/global.js"></script>
-<script>
-  function getAbsolutePosition(element) {
-    var xPosition = 0;
-    var yPosition = 0;
 
-    while (element) {
-      xPosition += element.offsetLeft - element.scrollLeft + element.clientLeft;
-      yPosition += element.offsetTop - element.scrollTop + element.clientTop;
-      element = element.offsetParent;
-    }
-    return { x: xPosition, y: yPosition };
-  }
-
-  function partyMode() {
-    const element = document.querySelector(".emoji-button");
-    console.log(element);
-    emojisplosion({
-      position() {
-        // https://stackoverflow.com/questions/1480133
-        const offset = getAbsolutePosition(element);
-
-        return {
-          x: offset.x + element.clientWidth / 2,
-          y: offset.y + element.clientHeight / 2,
-        };
-      },
-    });
-  }
-</script>
+<script src="/emojis.js"></script>
 
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
@@ -45,7 +17,6 @@
       <p class="lead">Collect, back up and mint tweets as NFTs.</p>
       <a
         class="btn btn-primary btn-lg px-4 mb-2 emoji-button"
-        onclick="partyMode()"
         role="button"
         >Mint Tweets as NFTs</a
       >
@@ -124,8 +95,7 @@
     </p>
     <p class="text-center mb-0 mt-4">
       <a
-        class="btn btn-primary btn-lg px-4 mb-2 emoji-button"
-        onclick="partyMode()"
+        class="btn btn-primary btn-lg px-4 mb-2"
         role="button"
         >Mint Tweets as NFTs</a
       >
