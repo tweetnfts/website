@@ -1,4 +1,4 @@
-baseurl = "https://tweetnfts.xyz"
+baseurl = "https://tweetnfts.xyz/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
