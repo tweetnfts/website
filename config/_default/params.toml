@@ -3,16 +3,16 @@
 ## Homepage
 title = "TweetNFTs"
 titleSeparator = "-"
-titleAddition = "Tweets as NFTs"
+titleAddition = "Tweet as NFTs."
 description = "Collect, back up, and mint your favorite tweets as NFTs."
 
 ## Documentation
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["tweetnfts.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
+domainTLD = "tweetnfts.xyz"
 titleHome = "TweetNFTs"
 
 ## Twitter Cards
@@ -22,21 +22,16 @@ twitterCreator = "@tweetnfts"
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
-schemaAuthor = "Henk Verlinde"
-schemaAuthorTwitter = "https://twitter.com/henkverlinde"
-schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaAuthorGitHub = "https://github.com/h-enk"
+schemaName = "TweetNFTs"
 schemaLocale = "en-US"
-schemaLogo = "logo-doks.png"
-schemaLogoWidth = 512
-schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaLogo = "logo-tweetnfts.png"
+schemaLogoWidth = 500
+schemaLogoHeight = 500
+schemaImage = "tweetnfts.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/getdoks"
-schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
+schemaTwitter = "https://twitter.com/tweetnfts"
+schemaGitHub = "https://github.com/tweetnfts"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -61,14 +56,14 @@ singleSize = false
 imageAddClass = "img-fluid lazyload blur-up"
 
 ### Image template
-defaultImage = "default-image.png" # put in `./assets/images/`
+defaultImage = "tweetnfts.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
 footer = "Made with 💙 by <a href='https://twitter.com/Thomas181197'>Thomas</a> and <a href='https://twitter.com/maxdesalle'>Maxime</a>, with help from <a href='https://www.linkedin.com/in/guillaume-wafflard/'>Guillaume</a>, <a href='https://www.linkedin.com/in/omar-g-69892a119/'>Omar</a> and Baktash"
 
 # Feed
-copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+copyRight = "Copyright (c) 2023 TweetNFTs"
 
 # Alert
 alert = false
