@@ -2,8 +2,8 @@
 
 ## Homepage
 title = "TweetNFTs"
-titleSeparator = "-"
-titleAddition = "Tweet as NFTs."
+titleSeparator = "|"
+titleAddition = "Tweet it. Mint it."
 description = "Collect, back up, and mint your favorite tweets as NFTs."
 
 ## Documentation
